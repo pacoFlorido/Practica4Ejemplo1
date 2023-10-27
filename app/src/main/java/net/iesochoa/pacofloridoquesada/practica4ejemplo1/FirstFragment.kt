@@ -37,9 +37,11 @@ class FirstFragment : Fragment() {
         }
         //llamada a SaludoFragment
         binding.btSaludo.setOnClickListener(){
+            //findNavController().navigate(R.id.action_FirstFragment_to_saludoFragment)
 
-            findNavController().navigate(R.id.action_FirstFragment_to_saludoFragment
-            )
+            val nombre = binding.etNombre.text.toString()
+            val action = FirstFragmentDirections.actionFirstFragmentToSaludoFragment(nombre)
+            findNavController().navigate(action)
         }
     }
 
