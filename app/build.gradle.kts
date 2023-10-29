@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "net.iesochoa.pacofloridoquesada.practica4ejemplo1"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "net.iesochoa.pacofloridoquesada.practica4ejemplo1"

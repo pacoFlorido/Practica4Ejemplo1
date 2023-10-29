@@ -35,11 +35,13 @@ class FirstFragment : Fragment() {
         binding.btNext.setOnClickListener {
             findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
         }
-        //llamada a SaludoFragment
+        // llamada a SaludoFragment
         binding.btSaludo.setOnClickListener(){
-            //findNavController().navigate(R.id.action_FirstFragment_to_saludoFragment)
+            // findNavController().navigate(R.id.action_FirstFragment_to_saludoFragment)
 
+            // Buscamos el nombre
             val nombre = binding.etNombre.text.toString()
+            // Creamos la accion pasandole el nombre como argumento
             val action = FirstFragmentDirections.actionFirstFragmentToSaludoFragment(nombre)
             findNavController().navigate(action)
         }
