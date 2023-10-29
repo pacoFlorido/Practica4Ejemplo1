@@ -20,9 +20,7 @@ class FirstFragment : Fragment() {
     private val binding get() = _binding!!
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+        inflater: LayoutInflater, container: ViewGroup?,savedInstanceState: Bundle?): View? {
 
         _binding = FragmentFirstBinding.inflate(inflater, container, false)
         return binding.root
@@ -41,7 +39,7 @@ class FirstFragment : Fragment() {
 
             // Buscamos el nombre
             val nombre = binding.etNombre.text.toString()
-            // Creamos la accion pasandole el nombre como argumento
+            // Creamos la accion pasandole el nombre como argumento a SaludoFragment
             val action = FirstFragmentDirections.actionFirstFragmentToSaludoFragment(nombre)
             findNavController().navigate(action)
         }

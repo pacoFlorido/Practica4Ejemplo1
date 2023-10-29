@@ -35,6 +35,25 @@
         tools:layout="@layout/fragment_saludo" >
         <argument
             android:name="nombre"
-            app:argType="string" />
+            app:argType="string"
+            android:defaultValue="Pepe" />
+        <action
+            android:id="@+id/action_saludoFragment_to_cambiaNombreFragment"
+            app:destination="@id/cambiaNombreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cambiaNombreFragment"
+        android:name="net.iesochoa.pacofloridoquesada.practica4ejemplo1.CambiaNombreFragment"
+        android:label="fragment_cambia_nombre"
+        tools:layout="@layout/fragment_cambia_nombre" >
+        <action
+            android:id="@+id/action_cambiaNombreFragment_to_saludoFragment"
+            app:destination="@id/saludoFragment"
+            app:popUpTo="@id/saludoFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="nombre_cambiar"
+            app:argType="string"
+            android:defaultValue="Manolo" />
     </fragment>
 </navigation>
